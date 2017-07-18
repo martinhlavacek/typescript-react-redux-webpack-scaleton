@@ -1,3 +1,4 @@
 export default {
-    'some.key.with.more.keys': 'Some string',
+    'brandclaim.title': 'Skeleton application',
+    'brandclaim.description': 'description of app'
 };

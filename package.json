@@ -2,8 +2,8 @@
   "name": "Skeleton",
   "version": "0.0.1",
   "license": "MIT",
-  "private": true,
-  "author": "",
+  "private": false,
+  "author": "Martin Hlavacek",
   "scripts": {
     "build:dev": "node ./node_modules/.bin/webpack -d --config build/webpack.config.js --env=dev  --display-error-details",
     "devserver": "node ./node_modules/.bin/webpack-dev-server --config build/webpack.config.js --env=dev",

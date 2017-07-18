@@ -5,17 +5,17 @@ import Locale from './../../services/app/Locale';
 
 import Flag from './Flag';
 
-type FlagsMapStateProps = {
+interface FlagsMapStateProps {
     locale: string;
-};
+}
 
-type FlagsMapDispatchProps = {
+interface FlagsMapDispatchProps {
     changeLanguage: (locale: string) => void;
-};
+}
 
-type FlagsStateProps = {
+interface FlagsStateProps {
     currentLocale: string;
-};
+}
 
 export class Flags extends React.PureComponent<FlagsMapStateProps & FlagsMapDispatchProps, FlagsStateProps> {
     state: FlagsStateProps = {

@@ -3,11 +3,11 @@ import Image from './../Image/Image';
 
 import './BrandClaim.scss';
 
-type BrandClaimProps = {
+interface BrandClaimProps {
     src: string;
     title: string;
     description: string;
-};
+}
 
 export default class BrandClaim extends React.PureComponent<BrandClaimProps, {}> {
 
