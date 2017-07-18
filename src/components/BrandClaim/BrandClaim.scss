@@ -1,0 +1,51 @@
+@import "./../../sass/_main";
+
+.BrandClaim {
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+	&__title, &__description {
+		font-weight: 700;
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+		color: $white;
+	}
+
+	&__title {
+		font-size: 52px;
+		line-height: 120px;
+		margin-top: -120px;
+		text-shadow: 0px 0px 3px rgba($aluminiumGrey, 1);
+	}
+
+		&__description {
+			font-size: 24px;
+		}
+}
+
+@media only screen and (min-width: #{map-get($breakpoints, 'mobile')}px) {
+	.BrandClaim {
+		height: 280px;
+	}
+}
+
+@media only screen and (min-width: #{map-get($breakpoints, 'tablet')}px) {
+	.BrandClaim {
+		height: 380px;
+	}
+}
+
+@media only screen and (min-width: #{map-get($breakpoints, 'desktop')}px) {
+	.BrandClaim {
+		height: 480px;
+	}
+}
+
+@media only screen and (min-width: #{map-get($breakpoints, 'desktop-large')}px) {
+	.BrandClaim {
+		height: 580px;
+	}
+}

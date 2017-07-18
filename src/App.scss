@@ -1,0 +1,12 @@
+@import "./sass/_main";
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100%;
+  color: $chromaGrey;
+
+  margin: 0;
+  padding: 0;
+}

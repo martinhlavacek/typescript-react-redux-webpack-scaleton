@@ -1,0 +1,18 @@
+@import "./../../sass/_main";
+
+.Flag {
+    display: inline;
+    opacity: 0.4;
+
+    &--active {
+        opacity: 1;
+    }
+
+    .icon {
+        width: 28px;
+        height: 20px;
+        margin-top: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
