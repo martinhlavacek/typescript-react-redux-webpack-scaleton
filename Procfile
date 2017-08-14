@@ -1,1 +1,1 @@
-web: yarn devserver && yarn build:dev
+web: npm run devserver && yarn build:dev
