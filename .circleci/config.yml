@@ -53,10 +53,6 @@ jobs:
       - run:
           name: npm install
           command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
       branch: master
         - run:
             command: |
