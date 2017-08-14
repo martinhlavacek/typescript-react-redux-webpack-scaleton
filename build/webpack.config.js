@@ -88,7 +88,7 @@ const config = {
   		contentBase: OUT_DIR,
 		publicPath: '/',
   		compress: false,
-  		port: 9020
+  		port: 80
 	}
 }
 
