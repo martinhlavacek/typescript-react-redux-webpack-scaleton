@@ -32,9 +32,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - deploy:
-          name: deploy
-          command: |
-            git push heroku secure-basin-79273:master
-            sleep 5 # sleep for 5 seconds to wait for dynos
-            heroku restart
+      #- deploy:
+       #   name: deploy
+        #  command: |
+         #   git push heroku secure-basin-79273:master
+          #  sleep 5 # sleep for 5 seconds to wait for dynos
+          #  heroku restart
