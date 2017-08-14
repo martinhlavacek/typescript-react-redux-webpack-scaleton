@@ -1,4 +1,4 @@
-About v1.0
+About v1.1
 --------
 Skeleton:
   - React, Redux, Redux-thunk, Redux router, Sass
