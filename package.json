@@ -8,6 +8,7 @@
     "build:dev": "node ./node_modules/.bin/webpack -d --config build/webpack.config.js --env=dev  --display-error-details",
     "devserver": "node ./node_modules/.bin/webpack-dev-server --config build/webpack.config.js --env=dev",
     "dev": "yarn devserver && yarn build:dev",
+    "start": "yarn devserver && yarn build:dev",
     "build:prod": "node ./node_modules/.bin/webpack --config build/webpack.config.js --env=prod",
     "prod": "yarn build:prod",
     "tslint": "node ./node_modules/tslint/bin/tslint --type-check --project tsconfig.json"
