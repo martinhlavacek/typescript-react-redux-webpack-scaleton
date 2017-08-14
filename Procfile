@@ -1,0 +1,1 @@
+web: yarn devserver && yarn build:dev
