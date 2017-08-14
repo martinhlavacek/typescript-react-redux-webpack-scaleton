@@ -36,5 +36,5 @@ jobs:
       # run tests!
      # - run: yarn test
       # run deploy
-      - run: yarn prod
+      - run: npm start
 
