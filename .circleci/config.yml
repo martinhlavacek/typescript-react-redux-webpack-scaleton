@@ -53,10 +53,9 @@ jobs:
       - run:
           name: npm install
           command: npm install
-      branch: master
-        - run:
-            command: |
-              git push heroku secure-basin-79273:master
-              sleep 5 # sleep for 5 seconds to wait for dynos
-              heroku restart
+      - run:
+          command: |
+            git push heroku secure-basin-79273:master
+            sleep 5 # sleep for 5 seconds to wait for dynos
+            heroku restart
 
