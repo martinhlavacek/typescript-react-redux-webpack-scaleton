@@ -38,12 +38,29 @@ jobs:
       # run deploy
       - run: yarn prod
 
-deployment:
-  dev:
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/repo
+    environment:
+      - HEROKU_APP: secure-basin-79273
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: npm install
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       branch: master
-      commands:
-        - heroku config:set CIRCLE_BUILD_NUM=$CIRCLE_BUILD_NUM --app shuttl-me-eu-dev
-        - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
-        - git push -f git@heroku.com:secure-basin-79273.git $CIRCLE_SHA1:refs/heads/master
-
+      - run:
+          command: |
+            git push heroku secure-basin-79273:master
+            sleep 5 # sleep for 5 seconds to wait for dynos
+            heroku restart
 
