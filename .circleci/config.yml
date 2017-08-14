@@ -35,6 +35,6 @@ jobs:
       - deploy:
           name: deploy
           command: |
-            git push heroku master
+            git push git@heroku.com:secure-basin-79273.git $CIRCLE_SHA1:refs/heads/master
             sleep 5 # sleep for 5 seconds to wait for dynos
             heroku restart
